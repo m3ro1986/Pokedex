@@ -1,0 +1,158 @@
+.loginBack {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../assets/images/forest.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.loginBack > main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+.pokedexBox {
+    position: relative;
+    width: 350px;
+    height: 525px;
+    background-image: url('../assets/images/pokedex.jpg');
+    border-radius: 13px;
+    text-align: center;
+}
+
+.biglight {
+    position: absolute;
+    width: 51px;
+    height: 51px;
+    top: 13px;
+    left: 36px;
+    border-radius: 50%;
+}
+
+.loading {
+    animation: shine .5s infinite;
+}
+
+@keyframes shine {
+    from { background-color:rgb(0, 255, 221);}
+    to { background-color: transparent;}
+}
+
+.pokedexBox p:nth-child(2) {
+    padding: 0 40px;
+    margin-top: 100px;
+}
+
+.pokedexBox img{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 100px;
+    top: 190px;
+}
+
+.pokedexBox p:nth-child(4) {
+    margin-top: 200px;
+}   
+
+.pokedexBox input {
+    position: absolute;
+    width: 306px;
+    height: 22px;
+    bottom: 109px;
+    left: 23px;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.controlBox {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 10px;
+    width: 310px;
+    height: 87px;
+    background-color:#636363;
+    bottom: 20px;
+    left: 20px;
+}
+
+.arrows {
+    position: relative;
+}
+
+.arrows button {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.arrows button:nth-child(1) {
+    top: 30px;
+    left: 14px;
+}
+
+.arrows button:nth-child(2) {
+    top: 30px;
+    right: 14px;
+}
+
+.arrows button:nth-child(3) {
+    top: 4px;
+    right: 39px;
+}
+
+.arrows button:nth-child(4) {
+    bottom: 4px;
+    right: 39px;
+}
+
+.typeGif {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.typeGif button{
+    border-radius: 1rem;
+    width: 100px;
+    height: 18px;
+    font-size: 10px;
+}
+
+.bx-dice-5 { 
+    font-size: 35px;
+    color: #fff;
+}
+
+.checks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.checks button {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+/* .buttonsBox {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color:#636363;
+    width: 156px;
+    height: 73px;
+    left:106px;
+    bottom: 24px;
+} */
