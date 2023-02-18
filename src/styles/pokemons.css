@@ -1,21 +1,38 @@
 .pokemonsBack header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 8vh;
+    width: 100%;
+    background-color: brown;
+    padding: 1rem;
+    color: aliceblue;
+    animation: down 1s linear ;
 }
+
+@keyframes down {
+    from { top: -8vh;}
+    to { top: 0vh}
+}
+
+.bx-chevron-left {
+    font-size: 2.5rem;
+}
+
 .pokemonsBack main {
     max-width: 1280px;
-    min-width: 375px;
-    max-height: 85vh;
+    min-width: 375px;   
     margin: 0 auto;
     padding: 2rem;
     display: grid;
     place-items: center;
     grid-template-columns: repeat( auto-fit, minmax( 8rem, 1fr ));
     gap: 1rem;
-    overflow-y: auto;
+    animation: zoom 1s linear;
 }
 
-.pokemonsBack footer{
-    background-color: black;
-    color: white;
-    height: 7vh;
+@keyframes zoom {
+    from { transform: scale(0.5)}
+    to { transform: scale(1);}
 }

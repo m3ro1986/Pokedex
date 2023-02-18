@@ -15,7 +15,8 @@ const Pokemons = () => {
     return (
         <div className='pokemonsBack'>
             <header>
-                <p>Welcome { userName }, here you can find your favorite POKEMON!!!</p>
+                <p>Welcome <span>{userName}</span>, here you can find your favorite POKEMON!!!</p>    
+                <i className='bx bx-chevron-left'></i>
             </header>
             <main>
                 {
@@ -24,9 +25,7 @@ const Pokemons = () => {
                     ))
                 }
             </main>
-            <footer>
-                <p>Create by Mero</p>
-            </footer>
+
         </div>
     );
 };
