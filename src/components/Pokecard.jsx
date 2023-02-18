@@ -12,7 +12,10 @@ const Pokecard = ( { url } ) => {
 
     return (
         <div className='pokecardBack'>
-            {pokemon.name}
+            <figure>
+                <img src={`/animated/normal/${pokemon.id}.gif`} />    
+            </figure>
+            <span>{pokemon.name}</span>
         </div>
     );
 };

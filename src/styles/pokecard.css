@@ -1,0 +1,19 @@
+.pokecardBack{
+    display: flex;
+    flex-direction: column;
+    background-color: brown;
+    width: 8rem;
+    height: 10rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.pokecardBack figure{
+    display: flex;
+    padding: 1rem;
+    height: 80%
+}
+
+.pokecardBack span {
+    font-size: 10px;
+}
