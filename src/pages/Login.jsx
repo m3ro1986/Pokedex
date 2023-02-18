@@ -65,7 +65,7 @@ const Login = () => {
         if (name !== '') {
             setLoading('loading')
             dispatch( getUserName(name) );
-            dispatch( getPokemonsThunk(0, 20) )   
+            dispatch( getPokemonsThunk(0, 60) )   
             setTimeout(() => {
                 navigate('/pokemons');
                 setLoading('')
