@@ -10,22 +10,33 @@ const Pokemons = () => {
     const pokemons = useSelector( state => state.pokemons.results );
     const [ offset, setOffset ] = useState(20);
     const [ limit, setLimit ] = useState(20);
+    const [ side, setSide ] = useState('hide');
 
+    const changeSide = () => {
+        side === 'hide' ? setSide('show') : setSide('hide');
+    }
 
     return (
         <div className='pokemonsBack'>
             <header>
                 <p>Welcome <span>{userName}</span>, here you can find your favorite POKEMON!!!</p>    
-                <i className='bx bx-chevron-left'></i>
+                <i onClick={ changeSide } className='bx bx-chevron-left'></i>
+                <aside className={`${ side }`}>
+                    <i onClick={ changeSide } className='bx bx-x'></i>
+                </aside>
             </header>
             <main>
+                <div className='pokelist'>
                 {
                     pokemons.map( e => (
                         <Pokecard key={ e.url } url={ e.url } />
                     ))
                 }
+                </div>
             </main>
-
+            <footer>
+                <span> all pokemons </span>
+            </footer>
         </div>
     );
 };

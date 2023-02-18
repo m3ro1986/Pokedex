@@ -1,5 +1,10 @@
-.pokemonsBack header {
+.pokemonsBack {
     position: relative;
+    overflow: hidden;
+}
+.pokemonsBack header {
+    position: sticky;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -11,16 +16,25 @@
     animation: down 1s linear ;
 }
 
-@keyframes down {
+/* @keyframes down {
     from { top: -8vh;}
     to { top: 0vh}
-}
+} */
 
 .bx-chevron-left {
     font-size: 2.5rem;
 }
 
+.bx-x { 
+    font-size: 2.5rem;
+}
+
 .pokemonsBack main {
+    height: 85vh;
+    overflow-y: auto;
+}
+
+.pokelist {
     max-width: 1280px;
     min-width: 375px;   
     margin: 0 auto;
@@ -29,10 +43,36 @@
     place-items: center;
     grid-template-columns: repeat( auto-fit, minmax( 8rem, 1fr ));
     gap: 1rem;
+    
     animation: zoom 1s linear;
 }
 
 @keyframes zoom {
     from { transform: scale(0.5)}
     to { transform: scale(1);}
+}
+
+.pokemonsBack header aside {
+    width: 375px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background-color:brown;
+    padding: 1rem;
+    transition: .5s;
+}
+
+.show {
+    right: 0px;
+}
+
+.hide {
+    right: -375px;
+}
+
+footer {
+    background-color:brown ;
+    color: white;
+    height: 7vh;
+    text-align: center;
 }
