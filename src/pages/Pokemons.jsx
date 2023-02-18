@@ -24,6 +24,9 @@ const Pokemons = () => {
                     ))
                 }
             </main>
+            <footer>
+                <p>Create by Mero</p>
+            </footer>
         </div>
     );
 };
