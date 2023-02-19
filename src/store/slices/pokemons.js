@@ -14,12 +14,20 @@ export const pokemonsSlice = createSlice({
     }
 })
 
-export const getPokemonsThunk = (offset, limit) => dispatch => {
+export const getPokemonsThunk = (limit) => dispatch => {
     // dispatch( setLoading('loading') );
-    axios.get(`https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${limit}`)
+    axios.get(`https://pokeapi.co/api/v2/pokemon/?limit=${limit}`)
         .then( res => dispatch( getPokemons( res.data )))
         // .finally(() => dispatch( setLoading( '' )))
 }
+
+export const getPagesThunk = (url) => dispatch => {
+    // dispatch( setLoading('loading') );
+    axios.get(url)
+        .then( res => dispatch( getPokemons( res.data )))
+        // .finally(() => dispatch( setLoading( '' )))
+}
+
 
 
 export const { getPokemons } = pokemonsSlice.actions;

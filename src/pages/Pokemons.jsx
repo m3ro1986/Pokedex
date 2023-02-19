@@ -1,19 +1,26 @@
 import '../styles/pokemons.css';
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Pokecard from '../components/Pokecard';
+import { getPagesThunk, getTypesThunk } from '../store/slices/pokemons';
 
 
 const Pokemons = () => {
 
+    const dispatch = useDispatch();
     const userName = useSelector( state => state.userName );
-    const pokemons = useSelector( state => state.pokemons.results );
-    const [ offset, setOffset ] = useState(20);
-    const [ limit, setLimit ] = useState(20);
+    const pokemons = useSelector( state => state.pokemons );
+    const [ limit, setLimit ] = useState(24);
     const [ side, setSide ] = useState('hide');
 
     const changeSide = () => {
         side === 'hide' ? setSide('show') : setSide('hide');
+    }
+
+    const changePage = ( url ) => {
+        if (url) {
+            dispatch( getPagesThunk(url) );
+        }
     }
 
     return (
@@ -28,14 +35,16 @@ const Pokemons = () => {
             <main>
                 <div className='pokelist'>
                 {
-                    pokemons.map( e => (
+                    pokemons.results?.map( e => (
                         <Pokecard key={ e.url } url={ e.url } />
                     ))
                 }
                 </div>
             </main>
             <footer>
+                <i onClick={ () => changePage( pokemons.previous )} className='bx bx-chevrons-left'></i>
                 <span> all pokemons </span>
+                <i onClick={ () => changePage( pokemons.next )} className='bx bx-chevrons-right' ></i>
             </footer>
         </div>
     );

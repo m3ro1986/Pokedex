@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+:root {
+    --red: #FF0000;
+    --BostonRed: #CC0000;
+    --CeruleanBlue: #3B4CCA;
+    --goldenYellow: #FFDE00;
+    --GoldFoil:#B3A125;
+}
+
 * {
     margin: 0;
     padding: 0;

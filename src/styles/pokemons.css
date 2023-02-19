@@ -10,9 +10,10 @@
     justify-content: space-between;
     height: 8vh;
     width: 100%;
-    background-color: brown;
+    background-color: var(--CeruleanBlue);
     padding: 1rem;
-    color: aliceblue;
+    color: var(--goldenYellow);
+    font-size: 12px;
     animation: down 1s linear ;
 }
 
@@ -21,16 +22,16 @@
     to { top: 0vh}
 } */
 
-.bx-chevron-left {
+.pokemonsBack .bx {
     font-size: 2.5rem;
 }
 
-.bx-x { 
+/* .bx-x { 
     font-size: 2.5rem;
-}
+} */
 
 .pokemonsBack main {
-    height: 85vh;
+    height: 84vh;
     overflow-y: auto;
 }
 
@@ -57,7 +58,7 @@
     height: 100vh;
     position: absolute;
     top: 0;
-    background-color:brown;
+    background-color: var(--CeruleanBlue);
     padding: 1rem;
     transition: .5s;
 }
@@ -71,8 +72,16 @@
 }
 
 footer {
-    background-color:brown ;
-    color: white;
-    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--CeruleanBlue);
+    color: var(--goldenYellow);
+    height: 8vh;
     text-align: center;
+    font-size: 12px;
+}
+
+footer span {
+    padding: 0 3rem;
 }

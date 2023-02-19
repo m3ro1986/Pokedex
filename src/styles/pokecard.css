@@ -1,7 +1,6 @@
 .pokecardBack{
     display: flex;
     flex-direction: column;
-    background-color: brown;
     width: 8rem;
     height: 10rem;
     border-radius: 1rem;
