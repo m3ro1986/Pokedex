@@ -2,7 +2,7 @@ import '../styles/pokemons.css';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Pokecard from '../components/Pokecard';
-import { getPagesThunk, getTypesThunk } from '../store/slices/pokemons';
+import { getPagesThunk } from '../store/slices/pokemons';
 
 
 const Pokemons = () => {

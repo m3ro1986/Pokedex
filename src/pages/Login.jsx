@@ -30,7 +30,7 @@ const Login = () => {
     }, [text]);
 
     useEffect( () => {
-        dispatch( getPokemonsThunk(0, 500) )
+        dispatch( getPokemonsThunk(500) )
     }, [])
 
     const changeImgGif = (type) => {
