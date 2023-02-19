@@ -13,7 +13,7 @@ const Pokecard = ( { url } ) => {
     return (
         <div className={`pokecardBack ${pokemon.types?.[0].type?.name}`}>
             <figure>
-                <img src={`/animated/normal/${pokemon.id ? pokemon.id : 0}.gif`} />    
+                <img src={`/animated/normal/${pokemon.id ? pokemon.id : 0}.gif`} />
             </figure>
             <span>{pokemon.name}</span>
         </div>
